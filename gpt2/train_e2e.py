@@ -185,12 +185,12 @@ if __name__ == '__main__':
 
     elif args.mode == 'webnlg':
         # 2017 Challeng Version.
-        TRAIN_FILE = "/u/scr/xlisali/WebNLG/webnlg-dataset/webnlg_challenge_2017/train.json"
-        TEST_FILE = "/u/scr/xlisali/WebNLG/webnlg-dataset/webnlg_challenge_2017/dev.json"
+        TRAIN_FILE = "/content/PrefixTuning/data/webnlg_challenge_2017/train.json"
+        TEST_FILE = "/content/PrefixTuning/data/webnlg_challenge_2017/dev.json"
 
         # v2
-        # TRAIN_FILE = "/u/scr/xlisali/WebNLG/webnlg-dataset/release_v2/json/webnlg_release_v2_train.json"
-        # TEST_FILE =  "/u/scr/xlisali/WebNLG/webnlg-dataset/release_v2/json/webnlg_release_v2_dev.json"
+        #TRAIN_FILE = "/u/scr/xlisali/WebNLG/webnlg-dataset/release_v2/json/webnlg_release_v2_train.json"
+        #TEST_FILE =  "/u/scr/xlisali/WebNLG/webnlg-dataset/release_v2/json/webnlg_release_v2_dev.json"
         folder_name = "webnlg_models/"
 
     elif args.mode == 'writingPrompts':
@@ -286,7 +286,7 @@ if __name__ == '__main__':
         OLD_MODEL = "gpt2-medium"
 
     app = "--optim_prefix {} --preseqlen {} --prefix_mode {} --format_mode {} " \
-          "--gradient_accumulation_steps {} --learning_rate {} --weight_decay {} --seed {} --disable_tqdm " \
+          "--gradient_accumulation_steps {} --learning_rate {} --weight_decay {} --seed {} --disable_tqdm 1 " \
           "--mid_dim {} --init_random {} --use_dropout {} --prefix_dropout {} --objective_mode {} ".\
         format(args.optim_prefix, args.preseqlen, args.prefix_mode, args.format_mode,
                args.gradient_accumulation_steps, args.learning_rate, args.weight_decay, args.seed,

@@ -285,7 +285,7 @@ if __name__ == '__main__':
         COMMANDLINE += ' --cache_dir /u/scr/xlisali/contrast_LM/transformers/examples/control/gpt2-large-s3 '
 
     if MODEL_FILE == 'gpt2-medium':
-        COMMANDLINE += ' --cache_dir /u/scr/xlisali/contrast_LM/transformers/examples/control/gpt2-medium-s3 '
+        COMMANDLINE += ' --cache_dir /home/hanati/hit/cache/gpt2-medium-s3 '
 
 
     print(COMMANDLINE)

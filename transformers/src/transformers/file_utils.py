@@ -706,7 +706,7 @@ def cached_path(
         url_or_filename = str(url_or_filename)
     if isinstance(cache_dir, Path):
         cache_dir = str(cache_dir)
-
+    print(cache_dir)
     if is_remote_url(url_or_filename):
         # URL, so get it from the cache (downloading if necessary)
         output_path = get_from_cache(
@@ -817,7 +817,6 @@ def get_from_cache(
         cache_dir = TRANSFORMERS_CACHE
     if isinstance(cache_dir, Path):
         cache_dir = str(cache_dir)
-
     os.makedirs(cache_dir, exist_ok=True)
 
     etag = None
