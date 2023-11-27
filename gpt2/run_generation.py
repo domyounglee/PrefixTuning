@@ -815,16 +815,16 @@ def main():
             split_file = args.eval_dataset
             decode_mode = 'beam'
             curr_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                   # args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, decode_mode))
             print(curr_dir)
             gold_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                   # args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file,'gold'))
             print(gold_dir)
             write_e2e_corr(prompt_text_lst, prompt_text_dict, gold_dir)
             src_dir = os.path.join('/home/hanati/hit/',
-                                   args.gen_dir,
+                                   #args.gen_dir,
                                    '{}_{}_{}'.format(temp,split_file, 'src'))
             write_e2e_src(prompt_text_lst, src_dir)
             out_handle = open(curr_dir, 'w')
@@ -860,16 +860,16 @@ def main():
             split_file = args.eval_dataset # test
             decode_mode = 'beam'
             curr_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                    #args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, decode_mode))
             print(curr_dir)
             gold_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                    #args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, 'gold'))
             print(gold_dir)
             write_e2e_corr(prompt_text_pair, prompt_text_dict, gold_dir)
             src_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                   # args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, 'src'))
             write_e2e_src(prompt_text_pair, src_dir)
 
@@ -905,13 +905,13 @@ def main():
             split_file = 'test' # test
             decode_mode = 'greedy'
             curr_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                  # args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, decode_mode))
             # curr_dir = '/content/text-generation/classify_results/{}_{}_{}'.format(
             #     temp, split_file, decode_mode)
             print(curr_dir)
             gold_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                   # args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, 'gold'))
             # gold_dir = '/content/text-generation/classify_results/{}_{}_{}'.format(
             #     temp,
@@ -920,7 +920,7 @@ def main():
             print(gold_dir)
             write_e2e_src(prompt_text_tgt, gold_dir)
             src_dir = os.path.join('/home/hanati/hit/',
-                                   args.gen_dir,
+                                   #args.gen_dir,
                                    '{}_{}_{}'.format(temp, split_file, 'src'))
             # src_dir = '/content/text-generation/classify_results/{}_{}_{}'.format(
             #     temp,
@@ -959,13 +959,13 @@ def main():
             split_file = 'test' # test
             decode_mode = 'beam'
             curr_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                  #  args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, decode_mode))
 
 
             print(curr_dir)
             gold_dir = os.path.join('/home/hanati/hit/',
-                                    args.gen_dir,
+                                 #   args.gen_dir,
                                     '{}_{}_{}'.format(temp, split_file, 'gold'))
             print(gold_dir)
             write_e2e_corr(prompt_text_lst, prompt_text_dict, gold_dir)
